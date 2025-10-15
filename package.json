@@ -4,7 +4,10 @@
   "description": "Curso 'Cypress, do Zero à Nuvem' da Escola Talking About Testing.",
   "main": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "cypress open",
+    "test": "cypress run",
+    "cy:mobile": "cypress open --config viewportWidth=410,viewportHeight=860",
+    "test:mobile": "cypress run --config viewportWidth=410,viewportHeight=860"
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,12 @@
   ],
   "author": "Walmyr <wlsf82@gmail.com> (https://walmyr.dev/)",
   "license": "MIT",
-  "homepage": "https://github.com/wlsf82/cypress-do-zero-a-nuvem#readme"
+  "homepage": "https://github.com/wlsf82/cypress-do-zero-a-nuvem#readme",
+  "devDependencies": {
+    "@cypress/puppeteer": "^0.1.8",
+    "cypress": "^13.12.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.0.0"
+  }
 }
