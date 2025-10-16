@@ -163,4 +163,18 @@ describe('Central de Atendimento ao Cliente TAT', () => {
     cy.get('h1').contains('CAC TAT - Política de Privacidade');
   });
 
+  //Simular o teste em um dispositivo móvel
+  /**1- Direto pela linha de comando:
+    cypress run --config viewportWidth=375, viewportHeight=667
+    OBS.: Os valores de altura e largura podem ser alterados conformee suas necessidades.
+  **/
+ /**2- Via arquivo de configurações: 
+    Por padrão, o Cypress utiliza a largura de 1000px e a altura de 660px.
+    Porém, é possível sobrescrever estes valores via arquivo de configuração (cypress.config.js).
+    Com o arquivo modificado, os testes serão executados em um viewport mobile, tanto quando rodar em modo headless(cypress run), como quando executados em modo interativo (cypress open).
+    Lembrando que o modo headless realiza os testes sem mostrar a interface gráfica, o navegador está rodando, só não renderiza nada. 
+ **/ 
+
+    
+
 })
